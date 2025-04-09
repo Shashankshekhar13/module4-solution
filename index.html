@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+    }
+    header {
+      margin-bottom: 1em;
+    }
+    nav a {
+      margin-right: 1em;
+      text-decoration: none;
+      color: #337ab7;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      margin-top: 1em;
+    }
+    .item {
+      border-bottom: 1px solid #ddd;
+      padding: 0.5em 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- A simple header with links (the home view will display a welcome message too) -->
+    <nav>
+      <a ui-sref="home">Home</a>
+      <a ui-sref="categories">Categories</a>
+    </nav>
+  </header>
+  
+  <!-- ui-view: the placeholder for state views -->
+  <div class="container" ui-view></div>
+
+  <!-- AngularJS and ui-router (from CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+
+  <!-- Application Files -->
+  <script src="menuapp.module.js"></script>
+  <script src="data.module.js"></script>
+  <script src="menudata.service.js"></script>
+  <script src="categories.component.js"></script>
+  <script src="items.component.js"></script>
+  <script src="routes.js"></script>
+</body>
+</html>
